@@ -20,7 +20,7 @@ jobs:
         run: cd examples/criterion-rs && cargo +nightly bench -- --output-format bencher | tee output.txt
 
       - name: Store benchmark result
-        uses: benchmark-action/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@680c6850672a99a3e2e422e0baa0c4120befd86b
         with:
           name: Criterion.rs Benchmark
           tool: 'cargo'
@@ -33,7 +33,7 @@ jobs:
           fail-on-alert: true
 
       - name: Store benchmark result - separate results repo
-        uses: benchmark-action/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@680c6850672a99a3e2e422e0baa0c4120befd86b
         with:
           name: Criterion.rs Benchmark
           tool: 'cargo'
