@@ -1,5 +1,6 @@
 name: CI - separate results repo
 on:
+  workflow_dispatch:
   push:
     branches:
       - master

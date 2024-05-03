@@ -1,5 +1,6 @@
 name: Criterion.rs Example
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -30,7 +31,6 @@ jobs:
           alert-threshold: '200%'
           comment-on-alert: true
           fail-on-alert: true
-          alert-comment-cc-users: '@ktrz'
 
       - name: Store benchmark result - separate results repo
         uses: benchmark-action/github-action-benchmark@v1
@@ -44,5 +44,4 @@ jobs:
           alert-threshold: '200%'
           comment-on-alert: true
           fail-on-alert: true
-          alert-comment-cc-users: '@ktrz'
           gh-repository: 'github.com/benchmark-action/github-action-benchmark-results'
