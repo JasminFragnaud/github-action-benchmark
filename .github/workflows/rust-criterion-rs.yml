@@ -31,3 +31,11 @@ jobs:
           alert-threshold: '100%'
           comment-on-alert: true
           fail-on-alert: true
+          fail-threshold: '120%'
+          comment-always: true
+
+      - name: Upload bench artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dev/bench
+          name: bench
