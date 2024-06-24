@@ -34,7 +34,7 @@ jobs:
           fail-threshold: '150%'
           comment-always: true
 
-      - run: checkout gh-pages
+      - run: git checkout gh-pages
 
       - name: Upload bench artifact
         uses: actions/upload-pages-artifact@v3
