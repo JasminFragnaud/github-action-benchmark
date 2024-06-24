@@ -34,6 +34,8 @@ jobs:
           fail-threshold: '120%'
           comment-always: true
 
+      - run: checkout gh-pages
+
       - name: Upload bench artifact
         uses: actions/upload-pages-artifact@v3
         with:
